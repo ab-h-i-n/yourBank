@@ -29,6 +29,18 @@ const loginPage = document.querySelector('#loginPage');
 loginBtnNav.addEventListener("click", () => {
 
     loginPage.classList.remove('hidden');
+    if(!signupPage.classList.contains('hidden')){ signupPage.classList.add('hidden');}
+})
+
+// unhide signup page 
+
+const signupBtnNav = document.querySelector('.login-signup-btn button:first-child');
+const signupPage = document.querySelector('#siginupPage');
+
+signupBtnNav.addEventListener("click", () => {
+
+    signupPage.classList.remove('hidden');
+    if(!loginPage.classList.contains('hidden')){loginPage.classList.add('hidden');}
 
 })
 
@@ -80,6 +92,7 @@ homebtn.addEventListener("click", () => {
     document.getElementById('usecases').classList.remove('hidden');
 
     if (!loginPage.classList.contains('hidden')) { loginPage.classList.add('hidden') }
+    if (!signupPage.classList.contains('hidden')) { signupPage.classList.add('hidden') }
 
 })
 
