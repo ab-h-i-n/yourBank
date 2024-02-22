@@ -11,6 +11,7 @@ loginSignupBtns.forEach((btn) => {
         loginSignupBtns.forEach((b) => {
             b.classList.remove('text-[#1C1C1C]');
             b.classList.remove('bg-[#CAFF33]');
+
         });
 
         btn.classList.add('text-[#1C1C1C]');
@@ -19,6 +20,17 @@ loginSignupBtns.forEach((btn) => {
     });
 
 });
+
+// unhide login page 
+
+const loginBtnNav = document.querySelector('.login-signup-btn button:last-child');
+const loginPage = document.querySelector('#loginPage');
+
+loginBtnNav.addEventListener("click", () => {
+
+    loginPage.classList.remove('hidden');
+
+})
 
 
 //nav bar links buttons
@@ -67,4 +79,17 @@ homebtn.addEventListener("click", () => {
     document.getElementById('our-service').classList.remove('hidden');
     document.getElementById('usecases').classList.remove('hidden');
 
+    if (!loginPage.classList.contains('hidden')) { loginPage.classList.add('hidden') }
+
 })
+
+//form functions 
+
+//pass unhide 
+
+const eyeBtn = document.querySelector('#passHide');
+const passInput = document.querySelector('.pass-input');
+
+eyeBtn.addEventListener("click", () => {
+    passInput.type = (passInput.type === 'password') ? 'text' : 'password';
+});
