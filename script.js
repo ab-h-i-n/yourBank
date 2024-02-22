@@ -5,7 +5,7 @@
 const loginSignupBtns = document.querySelectorAll('.login-signup-btn button');
 
 loginSignupBtns.forEach((btn) => {
-    
+
     btn.addEventListener("click", () => {
 
         loginSignupBtns.forEach((b) => {
@@ -26,7 +26,7 @@ loginSignupBtns.forEach((btn) => {
 const linkBtns = document.querySelectorAll('.link-btns li a');
 
 linkBtns.forEach((btn) => {
-    
+
     btn.addEventListener("click", () => {
 
         linkBtns.forEach((b) => {
@@ -38,3 +38,33 @@ linkBtns.forEach((btn) => {
     });
 
 });
+
+
+// nav login button click 
+
+
+const loginBtn = document.querySelectorAll('.sign-log-btn');
+
+loginBtn.forEach((logbtn) => {
+
+    logbtn.addEventListener("click", () => {
+
+        document.getElementById('hero-section').classList.add('hidden');
+        document.getElementById('our-service').classList.add('hidden');
+        document.getElementById('usecases').classList.add('hidden');
+
+    })
+}
+)
+
+//home button 
+
+const homebtn = document.querySelector('.home-btn');
+
+homebtn.addEventListener("click", () => {
+
+    document.getElementById('hero-section').classList.remove('hidden');
+    document.getElementById('our-service').classList.remove('hidden');
+    document.getElementById('usecases').classList.remove('hidden');
+
+})
