@@ -10,7 +10,180 @@
     <title>YourBanK</title>
 </head>
 
-<body class="bg-[#191919] lexend">
+<body class="bg-[#191919] lexend overflow-x-hidden ">
+
+    <!-- popups  -->
+
+    <!-- deposit popup -->
+
+    <div class="popup-container hidden fixed top-0 left-0 z-[100] h-screen w-screen">
+
+        <!-- background-blur  -->
+        <div class="absolute z-[120] w-full h-full backdrop-blur "></div>
+
+        <!-- deposit continer  -->
+
+        <form action="#" id="deposit"
+            class="hidden absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[150] rounded-[10px] bg-[#1C1C1C] py-[20px] px-[50px]">
+
+            <!-- heading  -->
+
+            <h1
+                class="text-[#CAFF33] font-[500] text-center text-[28px] leading-[35px] lg:text-[48px] lg:leading-[60px] ">
+                Deposit</h1>
+
+            <!-- text-display continer  -->
+
+            <p class="dispMsg"></p>
+
+            <!-- inputs  -->
+
+            <input
+                class=" mt-[30px] bg-[#1A1A1A] border border-[#262626] p-[16px] rounded-[88px] placeholder:font-[300] placeholder:text-[16px] placeholder:leading-[24px] placeholder:text-[#59595A] focus:outline-[#CAFF33] outline-offset-0 text-white lg:w-full"
+                placeholder="Enter your amount" type="text" name="depamount" id="depamount">
+
+            <!-- deposit and cancel buttons  -->
+
+            <div class="grid gap-y-[24px] mt-[38px] lg:px-[245px]">
+
+                <!-- confirm login button  -->
+
+                <button
+                    class="rounded-[63px] py-[14px] px-[24px] bg-[#CAFF33] text-[#262626] font-[400] text-[14px] leading-[21px] ">Deposit</button>
+
+                <button
+                    class="close-btn rounded-[63px] py-[14px] px-[24px] bg-[#262626] border border-[#333333] text-white font-[400] text-[14px] leading-[21px] ">Cancel</button>
+
+            </div>
+
+        </form>
+
+        <!-- withdraw continer  -->
+
+        <form action="#" id="withdraw"
+            class="hidden absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[150] rounded-[10px] bg-[#1C1C1C] py-[20px] px-[50px]">
+
+            <!-- heading  -->
+
+            <h1
+                class="text-[#CAFF33] font-[500] text-center text-[28px] leading-[35px] lg:text-[48px] lg:leading-[60px] ">
+                Withdraw</h1>
+
+            <!-- text-display continer  -->
+
+            <p class="dispMsg"></p>
+
+            <!-- inputs  -->
+
+            <input
+                class=" mt-[30px] bg-[#1A1A1A] border border-[#262626] p-[16px] rounded-[88px] placeholder:font-[300] placeholder:text-[16px] placeholder:leading-[24px] placeholder:text-[#59595A] focus:outline-[#CAFF33] outline-offset-0 text-white lg:w-full"
+                placeholder="Enter your amount" type="text" name="withamount" id="withamount">
+
+            <!-- withdraw and cancel buttons  -->
+
+            <div class="grid gap-y-[24px] mt-[38px] lg:px-[245px]">
+
+                <!-- confirm login button  -->
+
+                <button
+                    class="rounded-[63px] py-[14px] px-[24px] bg-[#CAFF33] text-[#262626] font-[400] text-[14px] leading-[21px] ">Withdraw</button>
+
+                <button
+                    class="close-btn rounded-[63px] py-[14px] px-[24px] bg-[#262626] border border-[#333333] text-white font-[400] text-[14px] leading-[21px] ">Cancel</button>
+
+            </div>
+
+        </form>
+
+        <!-- view Balanace continer  -->
+
+        <div id="view-bal"
+            class="hidden absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[150] rounded-[10px] bg-[#1C1C1C] py-[20px] px-[50px] grid place-items-center gap-y-[20px]">
+
+            <!-- heading  -->
+
+            <h1
+                class="text-[#CAFF33] font-[500] text-[28px] leading-[35px] lg:text-[48px] lg:leading-[60px] whitespace-nowrap">
+                Your Balance</h1>
+
+            <!-- text-display continer  -->
+
+            <p class="dispMsg text-white font-[400] text-[38px]">$4000</p>
+
+            <!-- close buttons  -->
+
+            <button
+                class="close-btn rounded-[63px] py-[14px] px-[24px] bg-[#CAFF33] text-[#262626] font-[400] text-[14px] leading-[21px] ">Close</button>
+
+        </div>
+
+        <!-- view account details  -->
+
+        <div id="view-acc"
+            class="hidden absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[150] rounded-[10px] bg-[#1C1C1C] py-[20px] px-[50px] grid place-items-center gap-y-[20px] ">
+
+            <!-- heading  -->
+
+            <h1
+                class="text-[#CAFF33] font-[500] text-[28px] leading-[35px] lg:text-[48px] lg:leading-[60px] whitespace-nowrap">
+                Account Details</h1>
+
+
+            <!-- inputs  -->
+
+            <div class="grid gap-y-[20px] lg:gap-x-[30px] lg:items-center lg:grid-cols-2">
+
+                <!-- first name  -->
+
+                <div class="grid gap-y-[5px]">
+
+                    <label for="fnameText" class="text-[#CAFF33] pl-[15px]">First Name </label>
+
+                    <input
+                        class="bg-[#1A1A1A] border border-[#262626] p-[16px] rounded-[88px] placeholder:font-[300] placeholder:text-[16px] placeholder:leading-[24px] placeholder:text-[#59595A] focus:outline-[#CAFF33] outline-offset-0 text-white lg:w-full"
+                        type="text" name="fnameText" id="fnameText" readonly>
+
+                </div>
+
+                <!-- last name  -->
+
+                <div class="grid gap-y-[5px]">
+
+                    <label for="lnameText" class="text-[#CAFF33] pl-[15px]">Last Name </label>
+
+                    <input
+                        class="bg-[#1A1A1A] border border-[#262626] p-[16px] rounded-[88px] placeholder:font-[300] placeholder:text-[16px] placeholder:leading-[24px] placeholder:text-[#59595A] focus:outline-[#CAFF33] outline-offset-0 text-white lg:w-full"
+                        type="text" name="lnameText" id="lnameText" readonly>
+
+                </div>
+
+                <!-- email  -->
+
+                <div class="grid gap-y-[5px]">
+
+                    <label for="emailText" class="text-[#CAFF33] pl-[15px]">Email</label>
+
+                    <input
+                        class="bg-[#1A1A1A] border border-[#262626] p-[16px] rounded-[88px] placeholder:font-[300] placeholder:text-[16px] placeholder:leading-[24px] placeholder:text-[#59595A] focus:outline-[#CAFF33] outline-offset-0 text-white lg:w-full"
+                        type="text" name="emailText" id="emailText" readonly>
+
+                </div>
+
+
+
+            </div>
+
+            <!-- close button  -->
+
+            <button
+                class="close-btn rounded-[63px] py-[14px] px-[24px] bg-[#262626] border border-[#333333] text-[#1C1C1C] font-[400] text-[14px] leading-[21px] bg-[#CAFF33]">Close</button>
+
+        </div>
+
+    </div>
+
+
+    </div>
 
     <!-- abstract img  -->
 
@@ -186,7 +359,7 @@
 
                 <!-- option 1  -->
 
-                <button class="grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
+                <button id="deposit-btn" class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
 
                     <!-- icon  -->
 
@@ -202,7 +375,7 @@
 
                 <!-- option 2  -->
 
-                <button class="grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
+                <button id="withdraw-btn" class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
 
                     <!-- icon  -->
 
@@ -218,7 +391,7 @@
 
                 <!-- option 3  -->
 
-                <button class="grid place-items-center gap-y-[20px] py-[30px] lg:px-[80px] w-full">
+                <button id="account-details-btn" class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[80px] w-full">
 
                     <!-- icon  -->
 
@@ -234,7 +407,7 @@
 
                 <!-- option 3  -->
 
-                <button class="grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
+                <button id="check-balance" class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
 
                     <!-- icon  -->
 

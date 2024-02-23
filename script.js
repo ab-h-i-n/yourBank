@@ -106,3 +106,60 @@ const passInput = document.querySelector('.pass-input');
 eyeBtn.addEventListener("click", () => {
     passInput.type = (passInput.type === 'password') ? 'text' : 'password';
 });
+
+
+//function btn click
+
+
+const body = document.querySelector('body');
+const fucBtns = document.querySelectorAll('.func-btn');
+const popupCont = document.querySelector('.popup-container');
+
+//show popup container 
+
+fucBtns.forEach((fucBtn)=>{
+
+    fucBtn.addEventListener("click",()=>{
+        popupCont.classList.remove('hidden');
+        body.classList.add('overflow-y-hidden');
+    });
+
+    switch (fucBtn.id) {
+        case "deposit-btn":
+            
+            const depositForm = document.querySelector(`#deposit`);
+
+            depositForm.classList.add('hidden');
+
+            break;
+        case "withdraw-btn":
+
+            document.querySelector(`#withdraw`).classList.remove('hidden');
+
+            break;
+
+        case "account-details-btn":
+            document.querySelector('#view-acc').classList.remove('hidden');
+            break;
+            
+        case "check-balance":
+            document.querySelector('#view-bal').classList.remove('hidden');
+            break;
+
+    
+        default:
+            break;
+    }
+})
+
+
+const closeBtns = document.querySelectorAll('close-btn');
+
+closeBtns.forEach((closeBtn)=>{
+
+    closeBtn.addEventListener("click",()=>{
+
+        popupCont.classList.remove('hidden');
+
+    });
+});
