@@ -23,7 +23,7 @@
 
         <!-- deposit continer  -->
 
-        <form action="#" id="deposit"
+        <form id="deposit"
             class="hidden absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[150] rounded-[10px] bg-[#1C1C1C] py-[20px] px-[50px]">
 
             <!-- heading  -->
@@ -51,7 +51,8 @@
                 <button
                     class="rounded-[63px] py-[14px] px-[24px] bg-[#CAFF33] text-[#262626] font-[400] text-[14px] leading-[21px] ">Deposit</button>
 
-                <button
+                <!-- cancel  -->
+                <button id="forDep"
                     class="close-btn rounded-[63px] py-[14px] px-[24px] bg-[#262626] border border-[#333333] text-white font-[400] text-[14px] leading-[21px] ">Cancel</button>
 
             </div>
@@ -60,7 +61,7 @@
 
         <!-- withdraw continer  -->
 
-        <form action="#" id="withdraw"
+        <form id="withdraw"
             class="hidden absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[150] rounded-[10px] bg-[#1C1C1C] py-[20px] px-[50px]">
 
             <!-- heading  -->
@@ -88,7 +89,9 @@
                 <button
                     class="rounded-[63px] py-[14px] px-[24px] bg-[#CAFF33] text-[#262626] font-[400] text-[14px] leading-[21px] ">Withdraw</button>
 
-                <button
+                <!-- cancel  -->
+
+                <button id="forWith"
                     class="close-btn rounded-[63px] py-[14px] px-[24px] bg-[#262626] border border-[#333333] text-white font-[400] text-[14px] leading-[21px] ">Cancel</button>
 
             </div>
@@ -112,7 +115,7 @@
 
             <!-- close buttons  -->
 
-            <button
+            <button id="forviewBal"
                 class="close-btn rounded-[63px] py-[14px] px-[24px] bg-[#CAFF33] text-[#262626] font-[400] text-[14px] leading-[21px] ">Close</button>
 
         </div>
@@ -175,7 +178,7 @@
 
             <!-- close button  -->
 
-            <button
+            <button id="forviewAcc"
                 class="close-btn rounded-[63px] py-[14px] px-[24px] bg-[#262626] border border-[#333333] text-[#1C1C1C] font-[400] text-[14px] leading-[21px] bg-[#CAFF33]">Close</button>
 
         </div>
@@ -359,7 +362,8 @@
 
                 <!-- option 1  -->
 
-                <button id="deposit-btn" class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
+                <button id="deposit-btn"
+                    class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
 
                     <!-- icon  -->
 
@@ -375,7 +379,8 @@
 
                 <!-- option 2  -->
 
-                <button id="withdraw-btn" class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
+                <button id="withdraw-btn"
+                    class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
 
                     <!-- icon  -->
 
@@ -391,7 +396,8 @@
 
                 <!-- option 3  -->
 
-                <button id="account-details-btn" class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[80px] w-full">
+                <button id="account-details-btn"
+                    class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[80px] w-full">
 
                     <!-- icon  -->
 
@@ -407,7 +413,8 @@
 
                 <!-- option 3  -->
 
-                <button id="check-balance" class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
+                <button id="check-balance"
+                    class="func-btn grid place-items-center gap-y-[20px] py-[30px] lg:px-[90px] w-full">
 
                     <!-- icon  -->
 

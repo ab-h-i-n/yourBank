@@ -98,6 +98,14 @@ homebtn.addEventListener("click", () => {
 
 //form functions 
 
+document.querySelectorAll('form').forEach((form)=>{
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+      });
+});
+
+
+
 //pass unhide 
 
 const eyeBtn = document.querySelector('#passHide');
@@ -123,41 +131,69 @@ fucBtns.forEach((fucBtn) => {
         popupCont.classList.remove('hidden');
         body.classList.add('overflow-y-hidden');
         console.log(fucBtn.id);
+
+
+        switch (fucBtn.id) {
+            case "deposit-btn":
+                console.log("Deposit btn clicked");
+                document.querySelector('#deposit').classList.remove('hidden');
+    
+                break;
+            case "withdraw-btn":
+    
+                document.querySelector('#withdraw').classList.remove('hidden');
+    
+                break;
+    
+            case "account-details-btn":
+                document.querySelector('#view-acc').classList.remove('hidden');
+                break;
+    
+            case "check-balance":
+                document.querySelector('#view-bal').classList.remove('hidden');
+                break;
+    
+            default: console.log("invalid");
+                break;
+        }
     });
 
-    switch (fucBtn.id) {
-        case "deposit-btn":
-            console.log("Deposit btn clicked");
-            document.querySelector('#deposit').classList.remove('hidden');
-
-            break;
-        case "withdraw-btn":
-
-            document.querySelector('#withdraw').classList.remove('hidden');
-
-            break;
-
-        case "account-details-btn":
-            document.querySelector('#view-acc').classList.remove('hidden');
-            break;
-
-        case "check-balance":
-            document.querySelector('#view-bal').classList.remove('hidden');
-            break;
-
-        default: console.log("invalid");
-            break;
-    }
+    
 })
 
+//close button
 
-const closeBtns = document.querySelectorAll('close-btn');
+const closeBtns = document.querySelectorAll('.close-btn');
 
 closeBtns.forEach((closeBtn) => {
 
     closeBtn.addEventListener("click", () => {
 
         popupCont.classList.add('hidden');
+        body.classList.remove('overflow-y-hidden');
+        switch (closeBtn.id) {
+            case "forDep":
+                console.log("Deposit btn clicked");
+                document.querySelector('#deposit').classList.add('hidden');
+    
+                break;
+            case "forWith":
+    
+                document.querySelector('#withdraw').classList.add('hidden');
+    
+                break;
+    
+            case "forViewAcc":
+                document.querySelector('#view-acc').classList.add('hidden');
+                break;
+    
+            case "forViewBal":
+                document.querySelector('#view-bal').classList.add('hidden');
+                break;
+    
+            default: console.log("invalid");
+                break;
+        }
 
     });
 });
