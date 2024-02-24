@@ -29,7 +29,7 @@ const loginPage = document.querySelector('#loginPage');
 loginBtnNav.addEventListener("click", () => {
 
     loginPage.classList.remove('hidden');
-    if(!signupPage.classList.contains('hidden')){ signupPage.classList.add('hidden');}
+    if (!signupPage.classList.contains('hidden')) { signupPage.classList.add('hidden'); }
 })
 
 // unhide signup page 
@@ -40,7 +40,7 @@ const signupPage = document.querySelector('#siginupPage');
 signupBtnNav.addEventListener("click", () => {
 
     signupPage.classList.remove('hidden');
-    if(!loginPage.classList.contains('hidden')){loginPage.classList.add('hidden');}
+    if (!loginPage.classList.contains('hidden')) { loginPage.classList.add('hidden'); }
 
 })
 
@@ -117,37 +117,35 @@ const popupCont = document.querySelector('.popup-container');
 
 //show popup container 
 
-fucBtns.forEach((fucBtn)=>{
+fucBtns.forEach((fucBtn) => {
 
-    fucBtn.addEventListener("click",()=>{
+    fucBtn.addEventListener("click", () => {
         popupCont.classList.remove('hidden');
         body.classList.add('overflow-y-hidden');
+        console.log(fucBtn.id);
     });
 
     switch (fucBtn.id) {
         case "deposit-btn":
-            
-            const depositForm = document.querySelector(`#deposit`);
-
-            depositForm.classList.add('hidden');
+            console.log("Deposit btn clicked");
+            document.querySelector('#deposit').classList.remove('hidden');
 
             break;
         case "withdraw-btn":
 
-            document.querySelector(`#withdraw`).classList.remove('hidden');
+            document.querySelector('#withdraw').classList.remove('hidden');
 
             break;
 
         case "account-details-btn":
             document.querySelector('#view-acc').classList.remove('hidden');
             break;
-            
+
         case "check-balance":
             document.querySelector('#view-bal').classList.remove('hidden');
             break;
 
-    
-        default:
+        default: console.log("invalid");
             break;
     }
 })
@@ -155,11 +153,11 @@ fucBtns.forEach((fucBtn)=>{
 
 const closeBtns = document.querySelectorAll('close-btn');
 
-closeBtns.forEach((closeBtn)=>{
+closeBtns.forEach((closeBtn) => {
 
-    closeBtn.addEventListener("click",()=>{
+    closeBtn.addEventListener("click", () => {
 
-        popupCont.classList.remove('hidden');
+        popupCont.classList.add('hidden');
 
     });
 });
